@@ -112,7 +112,7 @@ export default async function AppPage({ params }: AppPageProps) {
                   </div>
                 </div>
 
-                <AppScreenshots screenshots={app.screenshots} />
+                {app.screenshots && app.screenshots.length > 0 && <AppScreenshots screenshots={app.screenshots} />}
 
                 <Separator className="my-6" />
 

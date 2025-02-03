@@ -19,6 +19,7 @@ export interface App {
   }
   contentPath: string
   screenshots: string[]
+  content: string
 }
 
 export interface AppMeta {

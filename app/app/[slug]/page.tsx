@@ -120,7 +120,11 @@ export default async function AppPage({ params }: AppPageProps) {
 
                 <Separator className="my-6" />
 
-                <MarkdownContent content={app.content} />
+                {app.content ? (
+                  <MarkdownContent content={app.content} />
+                ) : (
+                  <p className="text-muted-foreground">No additional content available for this app.</p>
+                )}
               </div>
             </div>
 

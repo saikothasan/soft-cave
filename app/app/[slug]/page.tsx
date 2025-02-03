@@ -146,8 +146,16 @@ export default async function AppPage({ params }: AppPageProps) {
               <div>
                 <h2 className="font-semibold mb-4">Related Apps</h2>
                 <div className="grid gap-4">
-                  {relatedApps.map((app) => (
-                    <AppCard key={app.id} {...app} />
+                  {relatedApps.map((relatedApp) => (
+                    <AppCard
+                      key={relatedApp.id}
+                      title={relatedApp.title}
+                      image={relatedApp.image}
+                      category={relatedApp.category}
+                      rating={relatedApp.rating}
+                      downloads={relatedApp.downloads}
+                      slug={relatedApp.slug}
+                    />
                   ))}
                 </div>
               </div>

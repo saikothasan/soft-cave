@@ -30,5 +30,7 @@ export interface AppMeta {
   image: string
   category: string
   lastUpdated: string
+  rating: number
+  downloads: number
 }
 

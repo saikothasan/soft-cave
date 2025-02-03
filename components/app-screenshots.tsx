@@ -1,16 +1,11 @@
 import Image from "next/image"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
-export function AppScreenshots() {
-  // In a real app, these would come from the app data
-  const screenshots = [
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-  ]
+interface AppScreenshotsProps {
+  screenshots: string[]
+}
 
+export function AppScreenshots({ screenshots }: AppScreenshotsProps) {
   return (
     <ScrollArea className="w-full whitespace-nowrap rounded-lg">
       <div className="flex gap-4 p-4">
